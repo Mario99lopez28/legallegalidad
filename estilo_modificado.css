@@ -1,0 +1,45 @@
+
+:root {
+  --primary: #1a365d;
+  --secondary: #c5a881;
+  --dark: #252525;
+  --light: #f8f8f8;
+  --gray: #e5e5e5;
+
+  --text-color: var(--dark);
+  --bg-color: var(--light);
+  --nav-bg: #ffffff;
+  --hero-overlay: rgba(26, 54, 93, 0.7);
+}
+
+body[data-theme="dark"] {
+  --text-color: #f0f0f0;
+  --bg-color: #121212;
+  --nav-bg: #1e1e1e;
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* Transiciones suaves para cambio de tema */
+body, header, nav, section, footer {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Botón de cambio de tema */
+.toggle-theme {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.toggle-theme:hover {
+  transform: rotate(20deg);
+}
+
+/* Comportamiento de scroll suave */
+html {
+  scroll-behavior: smooth;
+}
